@@ -3,3 +3,8 @@
 __pycache__/
 .env
 .env.*
+*.pbip
+*.pbix
+*.Report/
+*.SemanticModel/
+_backup/
