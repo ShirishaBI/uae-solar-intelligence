@@ -20,6 +20,8 @@ A four-page Power BI dashboard on a simulated three-plant UAE solar portfolio, b
 
 The plant with the biggest bill is not always the plant with the biggest efficiency problem. A good dashboard shows both before anyone books a crew.
 
+**Full technical write-up:** [`docs/PROJECT_DEEP_DIVE.md`](docs/PROJECT_DEEP_DIVE.md) covers the data sources, architecture, star schema, data-quality checks, the DAX layer and the report build.
+
 ## Dashboard pages
 
 | Page | Question | Visuals |
