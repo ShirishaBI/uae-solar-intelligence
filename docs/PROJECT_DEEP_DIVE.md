@@ -25,22 +25,33 @@ Every table carries a `data_classification` field so simulated and illustrative 
 
 ## 3. Architecture
 
+Fabric workspace `uae-solar-dev` holds these items for the UAE dashboard branch:
+
+| Layer | Item | Role |
+|---|---|---|
+| Ingest | `pl_02_ingest_nasa_power_weather` (Data Factory pipeline) | Pulls the NASA POWER UAE 2024 response into the Bronze lakehouse as raw JSON |
+| Bronze | `lh_bronze` | Raw NASA POWER JSON file, kept unchanged |
+| Silver | `nb_06_nasa_power_silver_transformation` (notebook) and `df_01_nasa_power_bronze_to_silver` (Dataflow Gen2) | Parse the JSON, rename and standardise weather fields, add location and source metadata, validate |
+| Gold | `df_02_uae_solar_gold_model` (Dataflow Gen2) and `lh_gold` | Build the reporting tables: plant and date dimensions, daily solar fact, maintenance fact, configuration tables |
+| Semantic model | `SM_UAE_Solar_Gold` (Direct Lake) | Star schema and 85 DAX measures |
+| Report | Power BI report | Overview, Losses, Trends, Operations |
+
 ```
-NASA POWER weather + simulated plant data
-  -> Microsoft Fabric pipelines
-  -> PySpark notebooks into Silver and Gold lakehouses (Delta tables on OneLake)
-  -> Direct Lake semantic model (SM_UAE_Solar_Gold)
-  -> Power BI report: Overview, Losses, Trends, Operations
+NASA POWER JSON -> Bronze lakehouse -> Silver (notebook / dataflow) -> Gold lakehouse tables (dataflow)
+  -> Direct Lake semantic model -> Power BI report
 ```
 
-- **Storage:** Delta tables in OneLake. Silver holds cleaned data, Gold holds the reporting tables.
-- **Compute:** PySpark notebooks (window functions, joins, aggregations) transform Silver into Gold.
-- **Semantic layer:** a Direct Lake model reads the Gold tables directly, so there is no import refresh step.
-- **Report:** a Power BI report bound live to that model.
+### Silver step in detail (`nb_06_nasa_power_silver_transformation`)
 
-The notebooks that generated the simulated UAE plant-day tables are not part of this repository, so the Silver-to-Gold step for the UAE tables is described here at the level the semantic model proves (table names, grain and columns).
+1. Read the raw NASA POWER response from the Bronze lakehouse and fail loudly if the file is missing.
+2. Extract the daily parameters and convert the date from `YYYYMMDD` to a real date.
+3. Rename fields to readable names with units: `solar_irradiation_kwh_m2_day`, `air_temperature_c`, `wind_speed_m_s`, `relative_humidity_pct`.
+4. Add metadata: location name (`Dubai_UAE_Scenario`), latitude, longitude and `source_system = NASA_POWER`.
+5. Validate: row count, column list, duplicate dates and missing values.
 
-A broader proposed design (Gold Warehouse, ML scoring, telemetry replay with alerts) is shown in `images/architecture_proposed.png`. It is a proposal and is not part of the built report.
+The notebook is in [`fabric/notebooks`](../fabric/notebooks) with workspace IDs replaced by placeholders.
+
+The Power Query logic of the two dataflows (including the plant simulation and loss calculation) is not yet exported to this repository.
 
 ### Separate engineering branch: US PVDAQ telemetry
 
@@ -168,4 +179,4 @@ The decision insight: the plant with the biggest bill is not the plant with the 
 
 ## 10. Skills shown
 
-Microsoft Fabric (pipelines, lakehouses, OneLake), PySpark, Delta tables, star-schema design, Direct Lake, DAX (time intelligence, loss attribution, dynamic narratives), Power BI report design (PBIR, bookmarks, tooltips, SVG visuals), data-quality testing, data governance labelling, and storytelling for decision makers.
+Microsoft Fabric (pipelines, lakehouses, OneLake, Dataflows Gen2), PySpark (PVDAQ branch), pandas, Delta tables, star-schema design, Direct Lake, DAX (time intelligence, loss attribution, dynamic narratives), Power BI report design (PBIR, bookmarks, tooltips, SVG visuals), data-quality testing, data governance labelling, and storytelling for decision makers.
