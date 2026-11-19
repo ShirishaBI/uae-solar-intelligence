@@ -1,0 +1,4 @@
+plant_id,plant_name,capacity_kw,scenario_type,cleaning_interval_days,outage_frequency_days
+A,Plant A,10000,Normal,14,90
+B,Plant B,15000,Soiling,30,60
+C,Plant C,20000,Outage,21,15

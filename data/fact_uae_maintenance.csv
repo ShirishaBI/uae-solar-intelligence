@@ -1,0 +1,90 @@
+work_order_id,plant_id,event_date,event_type,downtime_hours,status,data_classification
+WO-00001,A,2024-01-14,Cleaning,0,Completed,SIMULATED
+WO-00002,A,2024-01-28,Cleaning,0,Completed,SIMULATED
+WO-00003,A,2024-02-11,Cleaning,0,Completed,SIMULATED
+WO-00004,A,2024-02-25,Cleaning,0,Completed,SIMULATED
+WO-00005,A,2024-03-10,Cleaning,0,Completed,SIMULATED
+WO-00006,A,2024-03-24,Cleaning,0,Completed,SIMULATED
+WO-00007,A,2024-03-30,Inverter Outage,2,Completed,SIMULATED
+WO-00008,A,2024-04-07,Cleaning,0,Completed,SIMULATED
+WO-00009,A,2024-04-21,Cleaning,0,Completed,SIMULATED
+WO-00010,A,2024-05-05,Cleaning,0,Completed,SIMULATED
+WO-00011,A,2024-05-19,Cleaning,0,Completed,SIMULATED
+WO-00012,A,2024-06-02,Cleaning,0,Completed,SIMULATED
+WO-00013,A,2024-06-16,Cleaning,0,Completed,SIMULATED
+WO-00014,A,2024-06-28,Inverter Outage,2,Completed,SIMULATED
+WO-00015,A,2024-06-30,Cleaning,0,Completed,SIMULATED
+WO-00016,A,2024-07-14,Cleaning,0,Completed,SIMULATED
+WO-00017,A,2024-07-28,Cleaning,0,Completed,SIMULATED
+WO-00018,A,2024-08-11,Cleaning,0,Completed,SIMULATED
+WO-00019,A,2024-08-25,Cleaning,0,Completed,SIMULATED
+WO-00020,A,2024-09-08,Cleaning,0,Completed,SIMULATED
+WO-00021,A,2024-09-22,Cleaning,0,Completed,SIMULATED
+WO-00022,A,2024-09-26,Inverter Outage,2,Completed,SIMULATED
+WO-00023,A,2024-10-06,Cleaning,0,Completed,SIMULATED
+WO-00024,A,2024-10-20,Cleaning,0,Completed,SIMULATED
+WO-00025,A,2024-11-03,Cleaning,0,Completed,SIMULATED
+WO-00026,A,2024-11-17,Cleaning,0,Completed,SIMULATED
+WO-00027,A,2024-12-01,Cleaning,0,Completed,SIMULATED
+WO-00028,A,2024-12-15,Cleaning,0,Completed,SIMULATED
+WO-00029,A,2024-12-25,Inverter Outage,2,Completed,SIMULATED
+WO-00030,A,2024-12-29,Cleaning,0,Completed,SIMULATED
+WO-00031,B,2024-01-30,Cleaning,0,Completed,SIMULATED
+WO-00032,B,2024-02-29,Cleaning,0,Completed,SIMULATED
+WO-00033,B,2024-02-29,Inverter Outage,2,Completed,SIMULATED
+WO-00034,B,2024-03-30,Cleaning,0,Completed,SIMULATED
+WO-00035,B,2024-04-29,Cleaning,0,Completed,SIMULATED
+WO-00036,B,2024-04-29,Inverter Outage,2,Completed,SIMULATED
+WO-00037,B,2024-05-29,Cleaning,0,Completed,SIMULATED
+WO-00038,B,2024-06-28,Cleaning,0,Completed,SIMULATED
+WO-00039,B,2024-06-28,Inverter Outage,2,Completed,SIMULATED
+WO-00040,B,2024-07-28,Cleaning,0,Completed,SIMULATED
+WO-00041,B,2024-08-27,Cleaning,0,Completed,SIMULATED
+WO-00042,B,2024-08-27,Inverter Outage,2,Completed,SIMULATED
+WO-00043,B,2024-09-26,Cleaning,0,Completed,SIMULATED
+WO-00044,B,2024-10-26,Cleaning,0,Completed,SIMULATED
+WO-00045,B,2024-10-26,Inverter Outage,2,Completed,SIMULATED
+WO-00046,B,2024-11-25,Cleaning,0,Completed,SIMULATED
+WO-00047,B,2024-12-25,Cleaning,0,Completed,SIMULATED
+WO-00048,B,2024-12-25,Inverter Outage,2,Completed,SIMULATED
+WO-00049,C,2024-01-15,Inverter Outage,2,Completed,SIMULATED
+WO-00050,C,2024-01-21,Cleaning,0,Completed,SIMULATED
+WO-00051,C,2024-01-30,Inverter Outage,2,Completed,SIMULATED
+WO-00052,C,2024-02-11,Cleaning,0,Completed,SIMULATED
+WO-00053,C,2024-02-14,Inverter Outage,2,Completed,SIMULATED
+WO-00054,C,2024-02-29,Inverter Outage,2,Completed,SIMULATED
+WO-00055,C,2024-03-03,Cleaning,0,Completed,SIMULATED
+WO-00056,C,2024-03-15,Inverter Outage,2,Completed,SIMULATED
+WO-00057,C,2024-03-24,Cleaning,0,Completed,SIMULATED
+WO-00058,C,2024-03-30,Inverter Outage,2,Completed,SIMULATED
+WO-00059,C,2024-04-14,Cleaning,0,Completed,SIMULATED
+WO-00060,C,2024-04-14,Inverter Outage,2,Completed,SIMULATED
+WO-00061,C,2024-04-29,Inverter Outage,2,Completed,SIMULATED
+WO-00062,C,2024-05-05,Cleaning,0,Completed,SIMULATED
+WO-00063,C,2024-05-14,Inverter Outage,2,Completed,SIMULATED
+WO-00064,C,2024-05-26,Cleaning,0,Completed,SIMULATED
+WO-00065,C,2024-05-29,Inverter Outage,2,Completed,SIMULATED
+WO-00066,C,2024-06-13,Inverter Outage,2,Completed,SIMULATED
+WO-00067,C,2024-06-16,Cleaning,0,Completed,SIMULATED
+WO-00068,C,2024-06-28,Inverter Outage,2,Completed,SIMULATED
+WO-00069,C,2024-07-07,Cleaning,0,Completed,SIMULATED
+WO-00070,C,2024-07-13,Inverter Outage,2,Completed,SIMULATED
+WO-00071,C,2024-07-28,Cleaning,0,Completed,SIMULATED
+WO-00072,C,2024-07-28,Inverter Outage,2,Completed,SIMULATED
+WO-00073,C,2024-08-12,Inverter Outage,2,Completed,SIMULATED
+WO-00074,C,2024-08-18,Cleaning,0,Completed,SIMULATED
+WO-00075,C,2024-08-27,Inverter Outage,2,Completed,SIMULATED
+WO-00076,C,2024-09-08,Cleaning,0,Completed,SIMULATED
+WO-00077,C,2024-09-11,Inverter Outage,2,Completed,SIMULATED
+WO-00078,C,2024-09-26,Inverter Outage,2,Completed,SIMULATED
+WO-00079,C,2024-09-29,Cleaning,0,Completed,SIMULATED
+WO-00080,C,2024-10-11,Inverter Outage,2,Completed,SIMULATED
+WO-00081,C,2024-10-20,Cleaning,0,Completed,SIMULATED
+WO-00082,C,2024-10-26,Inverter Outage,2,Completed,SIMULATED
+WO-00083,C,2024-11-10,Cleaning,0,Completed,SIMULATED
+WO-00084,C,2024-11-10,Inverter Outage,2,Completed,SIMULATED
+WO-00085,C,2024-11-25,Inverter Outage,2,Completed,SIMULATED
+WO-00086,C,2024-12-01,Cleaning,0,Completed,SIMULATED
+WO-00087,C,2024-12-10,Inverter Outage,2,Completed,SIMULATED
+WO-00088,C,2024-12-22,Cleaning,0,Completed,SIMULATED
+WO-00089,C,2024-12-25,Inverter Outage,2,Completed,SIMULATED

@@ -51,7 +51,7 @@ NASA POWER JSON -> Bronze lakehouse -> Silver (notebook / dataflow) -> Gold lake
 
 The notebook is in [`fabric/notebooks`](../fabric/notebooks) with workspace IDs replaced by placeholders.
 
-The Power Query logic of the two dataflows (including the plant simulation and loss calculation) is not yet exported to this repository.
+The plant simulation and loss rules are documented and verified in [`SIMULATION_LOGIC.md`](SIMULATION_LOGIC.md). The step-by-step build is in [`HOW_WE_BUILT_IT_IN_FABRIC.md`](HOW_WE_BUILT_IT_IN_FABRIC.md). The Power Query definitions of the two dataflows are not exported to this repository.
 
 ### Separate engineering branch: US PVDAQ telemetry
 

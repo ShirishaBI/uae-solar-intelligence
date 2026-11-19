@@ -18,7 +18,7 @@ The 2024 numbers (3 simulated plants, real NASA POWER weather):
 
 The lesson: the plant with the biggest bill is not always the plant with the biggest efficiency problem. A good dashboard shows both before anyone books a crew.
 
-Built with NASA POWER weather, Microsoft Fabric (pipelines, lakehouses, PySpark), a Direct Lake semantic model and Power BI. The video walks through all four pages.
+Built with NASA POWER weather, Microsoft Fabric (pipelines, lakehouses, notebooks, Dataflows Gen2), a Direct Lake semantic model and Power BI. The video walks through all four pages.
 
 Transparency: plants, generation and work orders are simulated. AED values use an illustrative tariff.
 
@@ -96,7 +96,7 @@ Data sources and method:
 - Plants, generation, maintenance work orders and losses: simulated for this case study (3 plants: A 10 MW, B 15 MW, C 20 MW)
 - Tariff: AED 0.30 per kWh, illustrative, so AED values are modeled exposure, not audited figures
 - Carbon: DEWA, EWEC and Ember grid factors are provisional and unverified
-- Stack: Microsoft Fabric (pipelines, lakehouses, PySpark), Direct Lake semantic model, Power BI
+- Stack: Microsoft Fabric (pipelines, lakehouses, notebooks, Dataflows Gen2), Direct Lake semantic model, Power BI
 - Not live monitoring and not an ML forecast
 
 Which plant would you check first, and what would you look at before sending a crew?

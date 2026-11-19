@@ -20,7 +20,16 @@ A four-page Power BI dashboard on a simulated three-plant UAE solar portfolio, b
 
 The plant with the biggest bill is not always the plant with the biggest efficiency problem. A good dashboard shows both before anyone books a crew.
 
-**Full technical write-up:** [`docs/PROJECT_DEEP_DIVE.md`](docs/PROJECT_DEEP_DIVE.md) covers the data sources, architecture, star schema, data-quality checks, the DAX layer and the report build.
+**Documentation**
+
+| Document | What it covers |
+|---|---|
+| [`docs/HOW_WE_BUILT_IT_IN_FABRIC.md`](docs/HOW_WE_BUILT_IT_IN_FABRIC.md) | Ordered build, from empty workspace to published report |
+| [`docs/PROJECT_DEEP_DIVE.md`](docs/PROJECT_DEEP_DIVE.md) | Business problem, architecture, star schema, quality checks, report build |
+| [`docs/SIMULATION_LOGIC.md`](docs/SIMULATION_LOGIC.md) | The exact rules that generate the simulated plant data, with a worked example |
+| [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) | Every table, column and relationship |
+| [`docs/MEASURES_CATALOGUE.md`](docs/MEASURES_CATALOGUE.md) | The 85 DAX measures by folder |
+| [`data/`](data) | Simulated and public data as CSV |
 
 ## Dashboard pages
 
@@ -35,7 +44,7 @@ Screenshots are in [`screenshots/`](screenshots).
 
 ## Architecture (as built)
 
-NASA POWER weather + simulated plant data → Microsoft Fabric pipelines → PySpark notebooks into Silver and Gold lakehouses → Direct Lake semantic model with DAX measures → Power BI report.
+NASA POWER weather + simulated plant data → Microsoft Fabric pipelines → a notebook and Dataflows Gen2 into Silver and Gold lakehouses → Direct Lake semantic model with DAX measures → Power BI report.
 
 A broader proposed enterprise design (Gold Warehouse, ML scoring, telemetry replay with alerts) is in [`images/architecture_proposed.png`](images/architecture_proposed.png). That design is a proposal, not part of the built report.
 
@@ -45,7 +54,7 @@ A broader proposed enterprise design (Gold Warehouse, ML scoring, telemetry repl
 - **Plants, generation, maintenance work orders and losses:** simulated for this case study (3 plants: A 10 MW, B 15 MW, C 20 MW)
 - **Tariff:** AED 0.30 per kWh, illustrative, so AED values are modeled exposure, not audited figures
 - **Carbon:** DEWA, EWEC and Ember grid factors are provisional and unverified
-- **Stack:** Microsoft Fabric (pipelines, lakehouses, PySpark), Direct Lake semantic model, Power BI
+- **Stack:** Microsoft Fabric (pipelines, lakehouses, notebooks, Dataflows Gen2), Direct Lake semantic model, Power BI
 - Not live monitoring and not a machine-learning forecast
 
 ## Videos

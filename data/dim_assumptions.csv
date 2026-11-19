@@ -1,0 +1,10 @@
+assumption_name,value,unit,source,classification
+baseline_efficiency,0.8,ratio,Project engineering assumption,SIMULATED
+tariff_aed_per_kwh,0.3,AED/kWh,Illustrative tariff; not an actual contract,SIMULATED
+base_loss_rate,0.02,ratio,Project baseline loss assumption,SIMULATED
+soiling_daily_increase,0.002,ratio/day,Proposed simulation parameter,SIMULATED
+soiling_cap,0.15,ratio,Proposed maximum soiling loss,SIMULATED
+outage_loss_per_downtime_hour,0.04,ratio/hour,Proposed simplified outage model,SIMULATED
+grid_ef_dewa_2025,0.3833,tCO2e/MWh,DEWA Sustainability Report 2025,PUBLISHED_2025_SCENARIO
+grid_ef_ewec_2025,0.187,tCO2/MWh,EWEC 2025; primary-source verification pending,PROVISIONAL
+grid_ef_ember_2025,0.4697,tCO2e/MWh,Ember 2025; primary-source verification pending,PROVISIONAL

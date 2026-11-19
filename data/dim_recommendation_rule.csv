@@ -1,0 +1,4 @@
+rule_id,rule_name,metric_name,threshold_value,comparison_operator,priority,recommended_action,rule_version,classification
+R001,High soiling loss,soiling_loss_rate,0.1,>,High,Inspect panels and evaluate cleaning,1.0,Illustrative
+R002,High outage downtime,outage_downtime_hours,2,>=,High,Investigate outage and review recovery,1.0,Illustrative
+R003,Low solar performance,performance_vs_expected_pct,85,<,Medium,"Investigate soiling, outages and weather",1.0,Illustrative
